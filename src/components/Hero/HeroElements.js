@@ -16,7 +16,7 @@ export const HeroContent = styled.div`
     padding: 0rem calc((100vw - 1300px) /2);
 `;
 
-export const HeroItem= styled.div`
+export const HeroItems = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -34,12 +34,29 @@ export const HeroItem= styled.div`
         width: 100%;
     }
 `;
-export const HeroBtn = styled.button`
 
+export const HeroBtn = styled.button`
+    font-size: 1.4rem;
+    padding: 1rem 4rem;
+    border: none;
+    background: rgb(27,83,108);
+    color: #fff;
+    transition: 0.2s ease-in;
+
+    &:hover{
+        background: rgb(27,83,120);
+        transition: 0.2s ease-out;
+        cursor: pointer;
+        color: #000;
+    }
 `;
 export const HeroH1 = styled.h1`
-    font-size
+    font-size : clamp(2.5rem, 10vw, 5rem);
+    margin-bottom: 1rem;
+    box-shadow: 3px 5px #e9ba23;
+    letter-spacing: 3px;
 `;
 export const HeroP = styled.p`
-
+    font-size : clamp(2rem, 2.5vw, 3rem);
+    margin-bottom: 2rem;
 `;
