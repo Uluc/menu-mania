@@ -1,14 +1,40 @@
-import React from 'react'
+import React from 'react';
 
-const Products = () => {
+import {
+    ProductsContainer,
+    ProductWrapper,
+    ProductsHeading,
+    ProductTitle,
+    ProductCard,
+    ProductImg,
+    ProductInfo,
+    ProductDesc,
+    ProductPrice,
+    ProductButton
+} from '/Users/Uluc/menu-mania/src/components/Products/ProductsElement.js'
+
+const Products = ({heading, data}) => {
     return (
         <ProductsContainer>
             <ProductsHeading>
-
+                {heading}
             </ProductsHeading>
-            <ProductsWrapper>
-                
-            </ProductsWrapper>
+            
+            <ProductWrapper>
+                {data.map((product, index) => {
+                    return(
+                        <ProductCard key = {index}>
+                            <ProductImg src = {product.img} alt={product.alt}/>
+                            <ProductInfo>
+                                <ProductTitle> {product.name} </ProductTitle>
+                                <ProductDesc> {product.desc} </ProductDesc>
+                                <ProductPrice> {product.price} </ProductPrice>
+                                <ProductButton> {product.button} </ProductButton>
+                            </ProductInfo>
+                        </ProductCard>
+                    );
+                })}
+            </ProductWrapper>
 
         </ProductsContainer>
 
