@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 import {
     ProductsContainer,
     ProductWrapper,
@@ -11,7 +11,7 @@ import {
     ProductDesc,
     ProductPrice,
     ProductButton
-} from '/Users/Uluc/menu-mania/src/components/Products/ProductsElement.js'
+} from './ProductsElement.js'
 
 const Products = ({heading, data}) => {
     return (
@@ -29,7 +29,14 @@ const Products = ({heading, data}) => {
                                 <ProductTitle> {product.name} </ProductTitle>
                                 <ProductDesc> {product.desc} </ProductDesc>
                                 <ProductPrice> {product.price} </ProductPrice>
-                                <ProductButton> {product.button} </ProductButton>
+                                <Link to={{
+                                    pathname: '/Menu',
+                                    state: {
+                                        product: product
+                                    }
+                                }}>
+                                    <ProductButton> {product.button} </ProductButton>
+                                </Link>
                             </ProductInfo>
                         </ProductCard>
                     );
