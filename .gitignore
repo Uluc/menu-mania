@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# vscode
+/.vscode
+
 # python
 *.pyc
 __pycache__/
@@ -28,3 +31,4 @@ __pycache__/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.vscode/settings.json
