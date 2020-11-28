@@ -4,8 +4,9 @@
 /.vscode
 
 # python
+*.cpython-38*
 *.pyc
-__pycache__/
+*/__pycache__/*
 
 # venv
 /venv
