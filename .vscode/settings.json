@@ -1,6 +1,6 @@
 {
     "python.pythonPath": "venv/bin/python",
-    "python.venvPath": "/Users/ryanstephens/Documents/csc_4402/project/menu-mania/venv",
+    "python.venvPath": "venv",
     "python.venvFolders": [
         "venv"
     ],
