@@ -1,3 +1,13 @@
 {
-    "python.pythonPath": "/usr/local/opt/python@3.8/bin/python3"
+    "python.pythonPath": "venv/bin/python",
+    "python.venvPath": "/Users/ryanstephens/Documents/csc_4402/project/menu-mania/venv",
+    "python.venvFolders": [
+        "venv"
+    ],
+    "python.terminal.activateEnvironment": true,
+    "python.languageServer": "Jedi",
+    "python.linting.pylintEnabled": false,
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true,
+    "python.formatting.provider": "yapf"
 }
