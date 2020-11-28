@@ -13,8 +13,7 @@ const Hero = () => {
     }
 
     return (
-        <HeroContainer>
-            
+        <HeroContainer>            
             <Navbar toggle = {toggle}/>
             <Sidebar isOpen = {isOpen} toggle = {toggle} />
             <HeroContent>

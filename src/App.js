@@ -1,20 +1,24 @@
 import React from 'react';
-import Navbar from './components/Navbar';
-import {BrowserRouter as Router} from 'react-router-dom';
 import { GlobalStyle } from './globalStyles';
+import Menu from './components/Menu';
 import Hero from './components/Hero';
 import Products from './components/Products';
 import { productData } from './components/Products/data';
+import { Route } from 'react-router-dom';
 
 function App() {
 
   return (
-    <Router>
-      <GlobalStyle/>
-      <Hero/>
-      <Products heading='Take Your Pick' data={productData} />
-      
-    </Router>
+    <div>
+      <GlobalStyle/>    
+      <Route exact path='/' render={(props) => (
+          <div>
+            <Hero />
+            <Products heading='Take Your Pick' data={productData} />      
+          </div>
+        )}/>
+      <Route exact path='/Menu' exact component={Menu} />       
+    </div>      
   );
 }
 
